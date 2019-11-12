@@ -1,6 +1,5 @@
 package com.spreeng.message;
 
-import java.time.Instant;
 import java.util.UUID;
 
 import javax.validation.constraints.Email;
@@ -20,9 +19,9 @@ public abstract class UserNotification implements LycorisSubjectMessage {
 
   @NotNull private UUID id;
 
-  @NotNull private Instant updateDateTime;
+  @NotNull private Long updateDateTime;
 
-  @NotNull private Instant creationDateTime;
+  @NotNull private Long creationDateTime;
 
   @NotNull private UserRole role;
 

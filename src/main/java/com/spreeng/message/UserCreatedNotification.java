@@ -1,6 +1,5 @@
 package com.spreeng.message;
 
-import java.time.Instant;
 import java.util.UUID;
 
 import javax.validation.constraints.Email;
@@ -23,8 +22,8 @@ public class UserCreatedNotification extends UserNotification implements Lycoris
 
   public static UserCreatedNotificationBuilder<?, ?> builder(
       @NotNull UUID id,
-      @NotNull Instant updateDateTime,
-      @NotNull Instant creationDateTime,
+      @NotNull Long updateDateTime,
+      @NotNull Long creationDateTime,
       @NotNull UserRole role,
       @NotNull UserStatus status,
       @NotBlank String lastName,

@@ -17,8 +17,8 @@ public class UserTests {
     UserCreatedNotification notification =
         UserCreatedNotification.builder(
                 UUID.randomUUID(),
-                Instant.now(),
-                Instant.now(),
+                Instant.now().toEpochMilli(),
+                Instant.now().toEpochMilli(),
                 UserRole.ADMIN,
                 UserStatus.ADDED,
                 "Test",
@@ -32,7 +32,7 @@ public class UserTests {
         TestUtils.getObjectMapper().readValue(json, UserCreatedNotification.class);
 
     assertThat(message, is(notNullValue()));
-    
+
     assertThat(message.getId(), is(notNullValue()));
   }
 }
