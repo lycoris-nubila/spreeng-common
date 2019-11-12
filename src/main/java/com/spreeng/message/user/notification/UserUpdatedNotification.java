@@ -1,4 +1,4 @@
-package com.spreeng.message;
+package com.spreeng.message.user.notification;
 
 import java.util.UUID;
 
@@ -7,8 +7,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.spreeng.message.user.UserRole;
+import com.spreeng.message.user.UserStatus;
 
-import eu.lycoris.spring.common.LycorisSubjectMessage;
 import lombok.Getter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
@@ -16,11 +17,11 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @SuperBuilder
 @ToString(callSuper = true)
-public class UserCreatedNotification extends UserNotification implements LycorisSubjectMessage {
+public class UserUpdatedNotification extends UserNotification {
 
-  public static final String SUBJECT = "USER_CREATED_NOTIFICATION";
+  public static final String SUBJECT = "USER_UPDATED_NOTIFICATION";
 
-  public static UserCreatedNotificationBuilder<?, ?> builder(
+  public static UserUpdatedNotificationBuilder<?, ?> builder(
       @NotNull UUID id,
       @NotNull Long updateDateTime,
       @NotNull Long creationDateTime,
@@ -29,7 +30,7 @@ public class UserCreatedNotification extends UserNotification implements Lycoris
       @NotBlank String lastName,
       @NotBlank String firstName,
       @NotBlank @Email String emailAddress) {
-    return new UserCreatedNotificationBuilderImpl()
+    return new UserUpdatedNotificationBuilderImpl()
         .id(id)
         .creationDateTime(creationDateTime)
         .updateDateTime(updateDateTime)
@@ -40,7 +41,7 @@ public class UserCreatedNotification extends UserNotification implements Lycoris
         .emailAddress(emailAddress);
   }
 
-  protected UserCreatedNotification() {
+  protected UserUpdatedNotification() {
     super();
   }
 

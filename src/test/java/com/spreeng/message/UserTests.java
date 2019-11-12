@@ -10,6 +10,10 @@ import java.util.UUID;
 
 import org.junit.Test;
 
+import com.spreeng.message.user.UserRole;
+import com.spreeng.message.user.UserStatus;
+import com.spreeng.message.user.notification.UserCreatedNotification;
+
 public class UserTests {
 
   @Test

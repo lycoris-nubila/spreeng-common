@@ -1,10 +1,11 @@
-package com.spreeng.message;
+package com.spreeng.message.organization.notification;
 
 import java.util.UUID;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+
+import com.spreeng.message.organization.OrganizationStatus;
 
 import eu.lycoris.spring.common.LycorisSubjectMessage;
 import lombok.AccessLevel;
@@ -15,27 +16,17 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @SuperBuilder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public abstract class UserNotification implements LycorisSubjectMessage {
+public abstract class OrganizationNotification implements LycorisSubjectMessage {
 
   @NotNull private UUID id;
-
+  
   @NotNull private Long updateDateTime;
 
   @NotNull private Long creationDateTime;
 
-  @NotNull private UserRole role;
+  @NotBlank private String name;
 
-  @NotNull private UserStatus status;
+  @NotNull private OrganizationStatus status;
 
-  @NotBlank private String lastName;
-
-  @NotBlank private String firstName;
-
-  @NotBlank @Email private String emailAddress;
-
-  private String phoneNumber;
-
-  private String passwordHash;
-
-  private UUID organizationId;
+  @NotNull private Float fees;
 }

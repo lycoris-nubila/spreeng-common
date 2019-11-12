@@ -1,4 +1,4 @@
-package com.spreeng.message;
+package com.spreeng.message.user;
 
 
 public enum UserStatus {
