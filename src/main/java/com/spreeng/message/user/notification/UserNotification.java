@@ -29,7 +29,6 @@ public abstract class UserNotification implements LycorisSubjectMessage {
   @NotNull private UserRole role;
 
   @NotNull private UserStatus status;
-
   @NotBlank private String lastName;
 
   @NotBlank private String firstName;
@@ -41,4 +40,6 @@ public abstract class UserNotification implements LycorisSubjectMessage {
   private String passwordHash;
 
   private UUID organizationId;
+  
+  private String activationCode;
 }
