@@ -2,15 +2,14 @@ package com.spreeng.message.organization.notification;
 
 import java.util.UUID;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-
 import com.spreeng.message.organization.OrganizationStatus;
+import com.spreeng.message.organization.OrganizationStyle;
 
 import eu.lycoris.spring.common.LycorisSubjectMessage;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.experimental.SuperBuilder;
 
 @Getter
@@ -18,15 +17,17 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class OrganizationNotification implements LycorisSubjectMessage {
 
-  @NotNull private UUID id;
-  
-  @NotNull private Long updateDateTime;
+  @NonNull private UUID id;
 
-  @NotNull private Long creationDateTime;
+  @NonNull private Long updateDateTime;
 
-  @NotBlank private String name;
+  @NonNull private Long creationDateTime;
 
-  @NotNull private OrganizationStatus status;
+  @NonNull private String name;
 
-  @NotNull private Float fees;
+  @NonNull private OrganizationStatus status;
+
+  @NonNull private Float fees;
+
+  @NonNull private OrganizationStyle style;
 }

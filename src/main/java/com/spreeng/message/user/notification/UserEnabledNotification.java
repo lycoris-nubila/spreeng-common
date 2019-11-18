@@ -2,14 +2,13 @@ package com.spreeng.message.user.notification;
 
 import java.util.UUID;
 
-import javax.validation.constraints.NotNull;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import eu.lycoris.spring.common.LycorisSubjectMessage;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
@@ -21,9 +20,9 @@ public class UserEnabledNotification implements LycorisSubjectMessage {
 
   public static final String SUBJECT = "USER_ENABLED_NOTIFICATION";
 
-  private UUID id;
+  @NonNull private UUID id;
 
-  public static UserEnabledNotificationBuilder<?, ?> builder(@NotNull UUID id) {
+  public static UserEnabledNotificationBuilder<?, ?> builder(@NonNull UUID id) {
     return new UserEnabledNotificationBuilderImpl().id(id);
   }
 
