@@ -1,5 +1,9 @@
 package com.spreeng.message.organization;
 
+import static javax.persistence.EnumType.STRING;
+
+import javax.persistence.Enumerated;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,22 +14,29 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class OrganizationStyle {
+
+  @NonNull private String primaryColor;
+
+  @NonNull private String secondaryColor;
+
+  @NonNull private String tertiaryColor;
+
+  @Enumerated(STRING)
   private OrganizationFont font;
 
-  @NonNull
-  private String primaryColor;
+  private String negativeColor;
 
-  private String thinkColor;
+  private String positiveColor;
 
-  private String planColor;
+  private String primaryTextColor;
 
-  private String executeColor;
+  private String secondaryTextColor;
 
-  private String alertColor;
-
-  private String successColor;
-
-  public static OrganizationStyleBuilder<?, ?> builder(@NonNull String primaryColor) {
-    return new OrganizationStyleBuilderImpl().primaryColor(primaryColor);
+  public static OrganizationStyleBuilder<?, ?> builder(
+      @NonNull String primaryColor, @NonNull String secondaryColor, @NonNull String tertiaryColor) {
+    return new OrganizationStyleBuilderImpl()
+        .primaryColor(primaryColor)
+        .secondaryColor(secondaryColor)
+        .tertiaryColor(tertiaryColor);
   }
 }
