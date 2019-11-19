@@ -1,10 +1,9 @@
 package com.spreeng.message.article.notification;
 
+import java.util.List;
 import java.util.UUID;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-
+import com.spreeng.message.article.ArticleContent;
 import com.spreeng.message.article.ArticleStatus;
 import com.spreeng.message.article.ArticleVisibility;
 
@@ -12,6 +11,7 @@ import eu.lycoris.spring.common.LycorisSubjectMessage;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.experimental.SuperBuilder;
 
 @Getter
@@ -19,19 +19,17 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class ArticleNotification implements LycorisSubjectMessage {
 
-  @NotNull private UUID id;
+  @NonNull private UUID id;
 
-  @NotNull private Long updateDateTime;
+  @NonNull private Long updateDateTime;
 
-  @NotNull private Long creationDateTime;
+  @NonNull private Long creationDateTime;
 
-  private String videoId;
+  @NonNull private ArticleStatus status;
 
-  @NotBlank private String pictureUrl;
+  @NonNull private ArticleVisibility visibility;
 
-  @NotNull private ArticleStatus status;
+  @NonNull private UUID authorId;
 
-  @NotNull private ArticleVisibility visibility;
-
-  @NotNull private UUID authorId;
+  @NonNull private List<ArticleContent> content;
 }

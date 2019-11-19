@@ -1,11 +1,12 @@
 package com.spreeng.message.article.notification;
 
+import java.util.List;
 import java.util.UUID;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.spreeng.message.article.ArticleContent;
 import com.spreeng.message.article.ArticleStatus;
 import com.spreeng.message.article.ArticleVisibility;
 
@@ -24,7 +25,7 @@ public class ArticleUpdatedNotification extends ArticleNotification {
       @NotNull UUID id,
       @NotNull Long updateDateTime,
       @NotNull Long creationDateTime,
-      @NotBlank String pictureUrl,
+      @NotNull List<ArticleContent> content,
       @NotNull ArticleStatus status,
       @NotNull ArticleVisibility visibility,
       @NotNull UUID authorId) {
@@ -32,8 +33,8 @@ public class ArticleUpdatedNotification extends ArticleNotification {
         .id(id)
         .updateDateTime(updateDateTime)
         .creationDateTime(creationDateTime)
-        .pictureUrl(pictureUrl)
         .status(status)
+        .content(content)
         .visibility(visibility)
         .authorId(authorId);
   }
