@@ -2,6 +2,8 @@ package com.spreeng.message.user.notification;
 
 import java.util.UUID;
 
+import javax.validation.constraints.NotNull;
+
 import com.spreeng.message.user.UserRole;
 import com.spreeng.message.user.UserStatus;
 
@@ -32,6 +34,8 @@ public abstract class UserNotification implements LycorisSubjectMessage {
   @NonNull private String firstName;
 
   @NonNull private String emailAddress;
+
+  @NotNull private Boolean enabled;
 
   private String phoneNumber;
 

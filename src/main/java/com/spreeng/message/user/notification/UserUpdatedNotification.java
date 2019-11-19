@@ -26,7 +26,8 @@ public class UserUpdatedNotification extends UserNotification {
       @NonNull UserStatus status,
       @NonNull String lastName,
       @NonNull String firstName,
-      @NonNull String emailAddress) {
+      @NonNull String emailAddress,
+      @NonNull Boolean enabled) {
     return new UserUpdatedNotificationBuilderImpl()
         .id(id)
         .creationDateTime(creationDateTime)
@@ -35,7 +36,8 @@ public class UserUpdatedNotification extends UserNotification {
         .status(status)
         .lastName(lastName)
         .firstName(firstName)
-        .emailAddress(emailAddress);
+        .emailAddress(emailAddress)
+        .enabled(enabled);
   }
 
   protected UserUpdatedNotification() {

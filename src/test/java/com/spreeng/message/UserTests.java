@@ -27,7 +27,8 @@ public class UserTests {
                 UserStatus.ADDED,
                 "Test",
                 "Test",
-                "test@test.com")
+                "test@test.com",
+                true)
             .build();
 
     String json = TestUtils.getObjectMapper().writeValueAsString(notification);
