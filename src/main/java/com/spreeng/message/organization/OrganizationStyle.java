@@ -17,26 +17,24 @@ public class OrganizationStyle {
 
   @NonNull private String primaryColor;
 
-  @NonNull private String secondaryColor;
+  private String primaryTextColor;
 
-  @NonNull private String tertiaryColor;
+  private String secondaryColor;
 
-  @Enumerated(STRING)
-  private OrganizationFont font;
+  private String secondaryTextColor;
 
   private String negativeColor;
 
   private String positiveColor;
 
-  private String primaryTextColor;
+  private String textColor;
 
-  private String secondaryTextColor;
+  private String textSecondaryColor;
 
-  public static OrganizationStyleBuilder<?, ?> builder(
-      @NonNull String primaryColor, @NonNull String secondaryColor, @NonNull String tertiaryColor) {
-    return new OrganizationStyleBuilderImpl()
-        .primaryColor(primaryColor)
-        .secondaryColor(secondaryColor)
-        .tertiaryColor(tertiaryColor);
+  @Enumerated(STRING)
+  private OrganizationFont font;
+
+  public static OrganizationStyleBuilder<?, ?> builder(@NonNull String primaryColor) {
+    return new OrganizationStyleBuilderImpl().primaryColor(primaryColor);
   }
 }
