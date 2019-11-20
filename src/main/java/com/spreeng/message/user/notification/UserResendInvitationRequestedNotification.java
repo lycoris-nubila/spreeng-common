@@ -1,4 +1,4 @@
-package com.spreeng.message.organization.notification;
+package com.spreeng.message.user.notification;
 
 import java.util.UUID;
 
@@ -16,14 +16,14 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @ToString(callSuper = true)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class OrganizationDisabledNotification implements LycorisSubjectMessage {
+public class UserResendInvitationRequestedNotification implements LycorisSubjectMessage {
 
-  public static final String SUBJECT = "ORGANIZATION_DISABLED_NOTIFICATION";
+  public static final String SUBJECT = "USER_RESEND_INVITATION_REQUESTED_NOTIFICATION";
 
   @NonNull private UUID id;
 
-  public static OrganizationDisabledNotificationBuilder<?, ?> builder(@NonNull UUID id) {
-    return new OrganizationDisabledNotificationBuilderImpl().id(id);
+  public static UserResendInvitationRequestedNotificationBuilder<?, ?> builder(@NonNull UUID id) {
+    return new UserResendInvitationRequestedNotificationBuilderImpl().id(id);
   }
 
   @Override
