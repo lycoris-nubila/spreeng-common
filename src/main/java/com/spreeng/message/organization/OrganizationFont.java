@@ -8,7 +8,7 @@ import lombok.Getter;
 public enum OrganizationFont {
   ROBOT("'Roboto', sans-serif"),
   OPEN_SANS("'Open Sans', sans-serif"),
-  MONTESERRAT("'Montserrat', sans-serif");
+  MONTSERRAT("'Montserrat', sans-serif");
 
   private String font;
 }
