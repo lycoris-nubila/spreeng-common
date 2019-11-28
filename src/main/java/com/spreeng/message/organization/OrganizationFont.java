@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum OrganizationFont {
-  ROBOT("'Roboto', sans-serif"),
+  ROBOTO("'Roboto', sans-serif"),
   OPEN_SANS("'Open Sans', sans-serif"),
   MONTSERRAT("'Montserrat', sans-serif");
 
