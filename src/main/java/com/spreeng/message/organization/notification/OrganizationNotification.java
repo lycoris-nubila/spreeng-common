@@ -2,6 +2,7 @@ package com.spreeng.message.organization.notification;
 
 import java.util.UUID;
 
+import com.spreeng.message.organization.OrganizationAddress;
 import com.spreeng.message.organization.OrganizationStatus;
 import com.spreeng.message.organization.OrganizationStyle;
 
@@ -30,4 +31,6 @@ public abstract class OrganizationNotification implements LycorisSubjectMessage 
   @NonNull private Float fees;
 
   @NonNull private OrganizationStyle style;
+  
+  @NonNull private OrganizationAddress address;
 }

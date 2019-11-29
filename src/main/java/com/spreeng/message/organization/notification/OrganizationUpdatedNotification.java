@@ -3,6 +3,7 @@ package com.spreeng.message.organization.notification;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.spreeng.message.organization.OrganizationAddress;
 import com.spreeng.message.organization.OrganizationStatus;
 import com.spreeng.message.organization.OrganizationStyle;
 
@@ -25,7 +26,8 @@ public class OrganizationUpdatedNotification extends OrganizationNotification {
       @NonNull String name,
       @NonNull OrganizationStatus status,
       @NonNull Float fees,
-      @NonNull OrganizationStyle style) {
+      @NonNull OrganizationStyle style, 
+      @NonNull OrganizationAddress address) {
     return new OrganizationUpdatedNotificationBuilderImpl()
         .id(id)
         .creationDateTime(creationDateTime)
@@ -33,7 +35,8 @@ public class OrganizationUpdatedNotification extends OrganizationNotification {
         .name(name)
         .status(status)
         .fees(fees)
-        .style(style);
+        .style(style)
+        .address(address);
   }
 
   protected OrganizationUpdatedNotification() {
