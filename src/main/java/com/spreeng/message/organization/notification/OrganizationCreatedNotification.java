@@ -25,7 +25,7 @@ public class OrganizationCreatedNotification extends OrganizationNotification {
       @NonNull Long creationDateTime,
       @NonNull String name,
       @NonNull OrganizationStatus status,
-      @NonNull Float fees,
+      Float fees,
       @NonNull OrganizationStyle style,
       @NonNull OrganizationAddress address) {
     return new OrganizationCreatedNotificationBuilderImpl()

@@ -28,7 +28,7 @@ public abstract class OrganizationNotification implements LycorisSubjectMessage 
 
   @NonNull private OrganizationStatus status;
 
-  @NonNull private Float fees;
+  private Float fees;
 
   @NonNull private OrganizationStyle style;
   

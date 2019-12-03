@@ -25,8 +25,8 @@ public class OrganizationUpdatedNotification extends OrganizationNotification {
       @NonNull Long creationDateTime,
       @NonNull String name,
       @NonNull OrganizationStatus status,
-      @NonNull Float fees,
-      @NonNull OrganizationStyle style, 
+      Float fees,
+      @NonNull OrganizationStyle style,
       @NonNull OrganizationAddress address) {
     return new OrganizationUpdatedNotificationBuilderImpl()
         .id(id)
