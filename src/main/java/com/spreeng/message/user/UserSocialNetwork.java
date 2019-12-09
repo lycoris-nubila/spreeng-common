@@ -1,6 +1,6 @@
 package com.spreeng.message.user;
 
-public enum UserNetwork {
+public enum UserSocialNetwork {
 	LINKEDIN, OUTLOOK, GOOGLE;
 
 }
