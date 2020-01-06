@@ -1,9 +1,9 @@
-package com.spreeng.message.commun;
+package com.spreeng.message.common;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.spreeng.message.commun.QueueNotificationService;
+import com.spreeng.message.common.QueueNotificationService;
 
 import eu.lycoris.spring.common.LycorisSubjectMessage;
 import eu.lycoris.spring.sns.LycorisSnsManager;

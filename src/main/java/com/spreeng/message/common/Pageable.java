@@ -1,4 +1,4 @@
-package com.spreeng.message.commun;
+package com.spreeng.message.common;
 
 import java.util.List;
 
