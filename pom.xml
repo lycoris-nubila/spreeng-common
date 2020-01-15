@@ -10,7 +10,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.spreeng</groupId>
-	<artifactId>spreeng-message</artifactId>
+	<artifactId>spreeng-common</artifactId>
 	<version>1.0.25</version>
 
 	<repositories>
