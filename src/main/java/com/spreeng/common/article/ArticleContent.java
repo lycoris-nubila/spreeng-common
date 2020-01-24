@@ -11,25 +11,20 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ArticleContent {
 
-  private String videoId;
-
   @NonNull private String title;
 
   @NonNull private String content;
 
   @NonNull private String language;
 
-  @NonNull private String pictureUrl;
 
   public static ArticleContentBuilder<?, ?> builder(
       @NonNull String title,
       @NonNull String content,
-      @NonNull String language,
-      @NonNull String pictureUrl) {
+      @NonNull String language) {
     return new ArticleContentBuilderImpl()
         .content(content)
         .language(language)
-        .pictureUrl(pictureUrl)
         .title(title);
   }
 }

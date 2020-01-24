@@ -25,6 +25,8 @@ public class ArticleCreatedNotification extends ArticleNotification {
       @NotNull UUID id,
       @NotNull Long updateDateTime,
       @NotNull Long creationDateTime,
+      @NotNull String pictureUrl,
+      @NotNull String videoId,
       @NotNull List<ArticleContent> content,
       @NotNull ArticleStatus status,
       @NotNull ArticleVisibility visibility,
@@ -33,6 +35,8 @@ public class ArticleCreatedNotification extends ArticleNotification {
         .id(id)
         .updateDateTime(updateDateTime)
         .creationDateTime(creationDateTime)
+        .pictureUrl(pictureUrl)
+        .videoId(videoId)
         .content(content)
         .status(status)
         .visibility(visibility)

@@ -19,17 +19,30 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class ArticleNotification implements LycorisSubjectMessage {
 
-  @NonNull private UUID id;
+	@NonNull
+	private UUID id;
 
-  @NonNull private Long updateDateTime;
+	@NonNull
+	private Long updateDateTime;
 
-  @NonNull private Long creationDateTime;
+	@NonNull
+	private Long creationDateTime;
 
-  @NonNull private ArticleStatus status;
+	@NonNull
+	private ArticleStatus status;
 
-  @NonNull private ArticleVisibility visibility;
+	@NonNull
+	private ArticleVisibility visibility;
 
-  @NonNull private UUID authorId;
+	@NonNull
+	private UUID authorId;
 
-  @NonNull private List<ArticleContent> content;
+	@NonNull
+	private String pictureUrl;
+
+	@NonNull
+	private String videoId;
+
+	@NonNull
+	private List<ArticleContent> content;
 }
