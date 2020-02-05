@@ -9,7 +9,7 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @SuperBuilder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class ArticleContent {
+public class ArticleI18n {
 
   @NonNull private String title;
 
@@ -17,14 +17,13 @@ public class ArticleContent {
 
   @NonNull private String language;
 
-
-  public static ArticleContentBuilder<?, ?> builder(
-      @NonNull String title,
-      @NonNull String content,
-      @NonNull String language) {
-    return new ArticleContentBuilderImpl()
-        .content(content)
-        .language(language)
-        .title(title);
-  }
+    public static ArticleI18nBuilder<?, ?> builder(
+        @NonNull String title,
+        @NonNull String content,
+        @NonNull String language) {
+      return new ArticleI18nBuilderImpl()
+          .content(content)
+          .language(language)
+          .title(title);
+    }
 }

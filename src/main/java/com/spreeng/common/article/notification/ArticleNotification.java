@@ -3,7 +3,7 @@ package com.spreeng.common.article.notification;
 import java.util.List;
 import java.util.UUID;
 
-import com.spreeng.common.article.ArticleContent;
+import com.spreeng.common.article.ArticleI18n;
 import com.spreeng.common.article.ArticleStatus;
 import com.spreeng.common.article.ArticleVisibility;
 
@@ -35,5 +35,5 @@ public abstract class ArticleNotification implements LycorisSubjectMessage {
 
   private String videoId;
 
-  @NonNull private List<ArticleContent> content;
+  @NonNull private List<ArticleI18n> localizations;
 }

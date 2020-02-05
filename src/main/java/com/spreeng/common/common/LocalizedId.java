@@ -8,6 +8,7 @@ import javax.persistence.Embeddable;
 import org.hibernate.annotations.BatchSize;
 
 import lombok.AccessLevel;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,6 +16,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Embeddable
+@EqualsAndHashCode
 @BatchSize(size = 100)
 @SuppressWarnings("serial")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

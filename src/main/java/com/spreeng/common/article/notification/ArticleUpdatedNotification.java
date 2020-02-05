@@ -6,7 +6,7 @@ import java.util.UUID;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.spreeng.common.article.ArticleContent;
+import com.spreeng.common.article.ArticleI18n;
 import com.spreeng.common.article.ArticleStatus;
 import com.spreeng.common.article.ArticleVisibility;
 
@@ -27,7 +27,7 @@ public class ArticleUpdatedNotification extends ArticleNotification {
       @NotNull Long creationDateTime,
       @NotNull String pictureUrl,
       String videoId,
-      @NotNull List<ArticleContent> content,
+      @NotNull List<ArticleI18n> content,
       @NotNull ArticleStatus status,
       @NotNull ArticleVisibility visibility,
       @NotNull UUID authorId) {
@@ -38,7 +38,7 @@ public class ArticleUpdatedNotification extends ArticleNotification {
         .pictureUrl(pictureUrl)
         .videoId(videoId)
         .status(status)
-        .content(content)
+        .localizations(content)
         .visibility(visibility)
         .authorId(authorId);
   }
