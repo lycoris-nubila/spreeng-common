@@ -1,0 +1,12 @@
+package com.spreeng.common.notification;
+
+public enum NotificationType {
+	MODULE_ADDED,
+	TODO_ADDED,
+	DOCUMENT_ADDED,
+	MEETING_REQUEST,
+	MEETING_ALTERNATIVE, 
+	MEETING_REJECT, 
+	MEETING_ACCEPTANCE, 
+	COACH_ASSOCIATION
+}
