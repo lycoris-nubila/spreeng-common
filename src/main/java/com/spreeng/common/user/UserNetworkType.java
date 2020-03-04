@@ -1,6 +1,6 @@
 package com.spreeng.common.user;
 
-public enum UserSocialNetwork {
+public enum UserNetworkType {
 	LINKEDIN, OUTLOOK, GOOGLE;
 
 }
