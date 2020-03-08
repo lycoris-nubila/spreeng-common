@@ -7,7 +7,9 @@ import com.spreeng.common.organization.OrganizationAddress;
 import com.spreeng.common.organization.OrganizationStatus;
 import com.spreeng.common.organization.OrganizationStyle;
 
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
@@ -15,6 +17,7 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @SuperBuilder
 @ToString(callSuper = true)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class OrganizationCreatedNotification extends OrganizationNotification {
 
   public static final String SUBJECT = "ORGANIZATION_CREATED_NOTIFICATION";
@@ -37,10 +40,6 @@ public class OrganizationCreatedNotification extends OrganizationNotification {
         .fees(fees)
         .style(style)
         .address(address);
-  }
-
-  protected OrganizationCreatedNotification() {
-    super();
   }
 
   @Override
