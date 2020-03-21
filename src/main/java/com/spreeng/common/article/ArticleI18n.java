@@ -17,13 +17,19 @@ public class ArticleI18n {
 
   @NonNull private String language;
 
-    public static ArticleI18nBuilder<?, ?> builder(
-        @NonNull String title,
-        @NonNull String content,
-        @NonNull String language) {
-      return new ArticleI18nBuilderImpl()
-          .content(content)
-          .language(language)
-          .title(title);
-    }
+  @NonNull private String pictureUrl;
+
+  private String videoId;
+
+  public static ArticleI18nBuilder<?, ?> builder(
+      @NonNull String title,
+      @NonNull String content,
+      @NonNull String language,
+      @NonNull String pictureUrl) {
+    return new ArticleI18nBuilderImpl()
+        .content(content)
+        .language(language)
+        .pictureUrl(pictureUrl)
+        .title(title);
+  }
 }

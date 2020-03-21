@@ -31,9 +31,5 @@ public abstract class ArticleNotification implements LycorisSubjectMessage {
 
   @NonNull private UUID authorId;
 
-  @NonNull private String pictureUrl;
-
-  private String videoId;
-
   @NonNull private List<ArticleI18n> localizations;
 }
