@@ -26,11 +26,13 @@ public abstract class OrganizationNotification implements LycorisSubjectMessage 
 
   @NonNull private String name;
 
+  private String logoUrl;
+
   @NonNull private OrganizationStatus status;
 
   private Float fees;
 
   @NonNull private OrganizationStyle style;
-  
+
   @NonNull private OrganizationAddress address;
 }
