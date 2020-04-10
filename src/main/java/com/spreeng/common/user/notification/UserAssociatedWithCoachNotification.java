@@ -4,7 +4,10 @@ import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import eu.lycoris.spring.common.LycorisSubjectMessage;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
@@ -12,7 +15,8 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @SuperBuilder
 @ToString(callSuper = true)
-public class UserAssociatedWithCoachNotification extends UserNotification {
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class UserAssociatedWithCoachNotification implements LycorisSubjectMessage {
   public static final String SUBJECT = "USER_ASSOCIATED_WITH_COACH_NOTIFICATION";
 
   @NonNull private UUID id;
