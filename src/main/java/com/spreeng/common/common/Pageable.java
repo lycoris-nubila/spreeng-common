@@ -10,4 +10,5 @@ import lombok.Getter;
 public class Pageable<T> {
   private Long totalElements;
   private List<T> elements;
+  private String nextPageToken;
 }
