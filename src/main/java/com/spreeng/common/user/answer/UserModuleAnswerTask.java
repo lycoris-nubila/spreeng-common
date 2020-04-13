@@ -17,7 +17,7 @@ public class UserModuleAnswerTask {
 
   private String taskLabel;
 
-  private UUID moduleTaskid;
+  private UUID moduleTaskId;
 
   private Instant taskDueDateTime;
 }
