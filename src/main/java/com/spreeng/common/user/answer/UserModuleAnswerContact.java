@@ -14,6 +14,8 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class UserModuleAnswerContact {
 
+  private UUID id;
+
   private String name;
 
   private UUID ownerId;
