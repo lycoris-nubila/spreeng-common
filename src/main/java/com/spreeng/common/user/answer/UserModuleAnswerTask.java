@@ -13,7 +13,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class UserModuleAnswerTask {
 
-  private UUID userTaskId;
+  private UUID taskId;
 
   private String taskLabel;
 
