@@ -14,7 +14,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class UserModuleAnswerUpdatedNotification extends UserModuleAnswerNotification {
 
-  public static final String SUBJECT = "USER_MODULE_ANSWER_SAVED_NOTIFICATION";
+  public static final String SUBJECT = "USER_MODULE_ANSWER_UPDATED_NOTIFICATION";
 
   public static UserModuleAnswerUpdatedNotificationBuilder<?, ?> builder(UUID userId) {
     return new UserModuleAnswerUpdatedNotificationBuilderImpl().userId(userId);
