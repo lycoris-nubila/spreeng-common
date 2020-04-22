@@ -37,9 +37,15 @@ public abstract class UserNotification implements LycorisSubjectMessage {
 
   @NotNull private Boolean enabled;
 
+  private String avatarUrl;
+
   private String phoneNumber;
 
+  private String linkedInUrl;
+
   private String passwordHash;
+
+  private String currentAddress;
 
   private UUID organizationId;
 
