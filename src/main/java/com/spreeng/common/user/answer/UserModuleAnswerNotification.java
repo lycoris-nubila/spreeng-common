@@ -24,5 +24,7 @@ public abstract class UserModuleAnswerNotification implements LycorisSubjectMess
 
   private UserModuleAnswerTask task;
 
+  private UUID pushModuleFirstColumnId;
+
   private List<UserModuleAnswerContact> contacts;
 }
