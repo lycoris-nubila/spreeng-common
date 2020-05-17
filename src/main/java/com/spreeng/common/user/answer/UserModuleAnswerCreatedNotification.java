@@ -16,6 +16,10 @@ public class UserModuleAnswerCreatedNotification extends UserModuleAnswerNotific
 
   public static final String SUBJECT = "USER_MODULE_ANSWER_CREATED_NOTIFICATION";
 
+  private UUID pushOrgModuleId;
+
+  private String pushOrgModuleName;
+
   public static UserModuleAnswerCreatedNotificationBuilder<?, ?> builder(UUID userId) {
     return new UserModuleAnswerCreatedNotificationBuilderImpl().userId(userId);
   }

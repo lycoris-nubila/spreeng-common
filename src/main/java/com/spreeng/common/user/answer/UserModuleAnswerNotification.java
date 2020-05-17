@@ -18,13 +18,13 @@ public abstract class UserModuleAnswerNotification implements LycorisSubjectMess
 
   private UUID reportTaskId;
 
-  private UUID pushOrgModuleId;
+  private UUID kanbanOrgModuleId;
 
-  private String pushOrgModuleName;
+  private String kanbanOrgModuleName;
 
   private UserModuleAnswerTask task;
 
-  private UUID pushModuleFirstColumnId;
+  private UUID kanbanModuleFirstColumnId;
 
   private List<UserModuleAnswerContact> contacts;
 }
