@@ -5,6 +5,6 @@ public enum TaskType {
   TODO_MEMO,
   MEETING,
   CONTACT,
-  CUSTOM,
+  MODULE,
   TODO
 }
