@@ -1,9 +1,9 @@
 package com.spreeng.common.user.notification;
 
+import java.util.List;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.spreeng.common.section.SectionType;
 
 import eu.lycoris.spring.common.LycorisSubjectMessage;
 import lombok.AccessLevel;
@@ -20,18 +20,15 @@ import lombok.experimental.SuperBuilder;
 public class UserPlanCreatedNotification implements LycorisSubjectMessage {
   public static final String SUBJECT = "USER_PLAN_CREATED_NOTIFICATION";
 
-  UUID userId;
+  private UUID userId;
 
-  UUID moduleId;
-
-  SectionType sectionType;
+  private List<UUID> firstModulesId;
 
   public static UserPlanCreatedNotificationBuilder<?, ?> builder(
-      @NonNull UUID userId, @NonNull UUID moduleId, @NonNull SectionType sectionType) {
+      @NonNull UUID userId, @NonNull List<UUID> firstModulesId) {
     return new UserPlanCreatedNotificationBuilderImpl()
         .userId(userId)
-        .moduleId(moduleId)
-        .sectionType(sectionType);
+        .firstModulesId(firstModulesId);
   }
 
   @Override
