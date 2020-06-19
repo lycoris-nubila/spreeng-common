@@ -16,6 +16,8 @@ public class UserModuleAnswerTask {
   private UUID taskId;
 
   private String taskLabel;
+  
+  private Boolean taskDone;
 
   private UUID moduleTaskId;
 
