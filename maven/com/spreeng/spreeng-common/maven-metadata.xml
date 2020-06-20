@@ -3,7 +3,7 @@
   <groupId>com.spreeng</groupId>
   <artifactId>spreeng-common</artifactId>
   <versioning>
-    <release>1.0.69</release>
+    <release>1.0.70</release>
     <versions>
       <version>1.0.25</version>
       <version>1.0.26</version>
@@ -47,7 +47,8 @@
       <version>1.0.67</version>
       <version>1.0.68</version>
       <version>1.0.69</version>
+      <version>1.0.70</version>
     </versions>
-    <lastUpdated>20200619235912</lastUpdated>
+    <lastUpdated>20200620212603</lastUpdated>
   </versioning>
 </metadata>

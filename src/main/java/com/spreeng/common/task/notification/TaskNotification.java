@@ -26,6 +26,8 @@ public abstract class TaskNotification implements LycorisSubjectMessage {
 
   private String todoTitle;
 
+  private UUID moduleTaskId;
+
   private UUID participantId;
 
   private String contactName;
