@@ -27,7 +27,7 @@ public class UserModuleStartedNotification implements LycorisSubjectMessage {
   private UUID organizationModuleId;
 
   public static UserModuleStartedNotificationBuilder<?, ?> builder(
-      @NonNull UUID coacheeId, @NonNull UUID coachId, @NonNull UUID organizationModuleId) {
+      @NonNull UUID coacheeId, UUID coachId, @NonNull UUID organizationModuleId) {
     return new UserModuleStartedNotificationBuilderImpl()
         .organizationModuleId(organizationModuleId)
         .coacheeId(coacheeId)

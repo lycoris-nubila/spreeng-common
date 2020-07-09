@@ -27,7 +27,7 @@ public class UserModuleCoachCommentUpdatedNotification implements LycorisSubject
   private UUID organizationModuleId;
 
   public static UserModuleCoachCommentUpdatedNotificationBuilder<?, ?> builder(
-      @NonNull UUID coacheeId, @NonNull UUID coachId, @NonNull UUID organizationModuleId) {
+      @NonNull UUID coacheeId, UUID coachId, @NonNull UUID organizationModuleId) {
     return new UserModuleCoachCommentUpdatedNotificationBuilderImpl()
         .organizationModuleId(organizationModuleId)
         .coacheeId(coacheeId)
