@@ -50,6 +50,8 @@ public abstract class UserNotification implements LycorisSubjectMessage {
   private UUID organizationId;
 
   private String activationCode;
+  
+  private String language;
 
   private UUID coachId;
 }
