@@ -1,5 +1,6 @@
 package com.spreeng.common.user.notification;
 
+import java.util.List;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -26,6 +27,8 @@ public class UserModuleDoneNotification implements LycorisSubjectMessage {
 
   private UUID organizationModuleId;
 
+  private List<UUID> nextModulesId;
+  
   public static UserModuleDoneNotificationBuilder<?, ?> builder(
       @NonNull UUID coacheeId, UUID coachId, @NonNull UUID organizationModuleId) {
     return new UserModuleDoneNotificationBuilderImpl()
