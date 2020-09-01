@@ -1,5 +1,6 @@
 package com.spreeng.common.user.notification;
 
+import java.time.ZoneId;
 import java.util.UUID;
 
 import javax.validation.constraints.NotNull;
@@ -50,8 +51,10 @@ public abstract class UserNotification implements LycorisSubjectMessage {
   private UUID organizationId;
 
   private String activationCode;
-  
+
   private String language;
 
   private UUID coachId;
+
+  private ZoneId timeZone;
 }
