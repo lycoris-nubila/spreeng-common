@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.spreeng.common.user.UserDoneModule;
+import com.spreeng.common.user.UserDueTask;
 
 import eu.lycoris.spring.common.LycorisSubjectMessage;
 import lombok.AccessLevel;
@@ -18,19 +18,19 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @ToString(callSuper = true)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class UserWeeklySummaryNotification implements LycorisSubjectMessage {
+public class UserTaskWeeklySummaryNotification implements LycorisSubjectMessage {
 
-  public static final String SUBJECT = "USER_WEEKLY_SUMMARY_NOTIFICATION";
+  public static final String SUBJECT = "USER_TASK_WEEKLY_SUMMARY_NOTIFICATION";
 
   @NonNull private UUID userId;
 
-  @NonNull private List<UserDoneModule> userDoneModules;
+  @NonNull private List<UserDueTask> userDueTasks;
 
-  public static UserWeeklySummaryNotificationBuilder<?, ?> builder(
-      @NonNull UUID userId, @NonNull List<UserDoneModule> userDoneModules) {
-    return new UserWeeklySummaryNotificationBuilderImpl()
+  public static UserTaskWeeklySummaryNotificationBuilder<?, ?> builder(
+      @NonNull UUID userId, @NonNull List<UserDueTask> userDueTasks) {
+    return new UserTaskWeeklySummaryNotificationBuilderImpl()
         .userId(userId)
-        .userDoneModules(userDoneModules);
+        .userDueTasks(userDueTasks);
   }
 
   @Override
