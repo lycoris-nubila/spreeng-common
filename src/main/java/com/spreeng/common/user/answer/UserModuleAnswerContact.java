@@ -19,6 +19,8 @@ public class UserModuleAnswerContact {
   private String name;
 
   private UUID ownerId;
+  
+  private String language;
 
   private String companyName;
 
