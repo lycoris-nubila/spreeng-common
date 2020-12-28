@@ -16,10 +16,14 @@ import lombok.experimental.SuperBuilder;
 public class OrganizationStyle {
 
   @NonNull private String primaryColor;
+  
+  private String primaryPastelColor;
 
   private String primaryTextColor;
 
   private String secondaryColor;
+  
+  private String secondaryPastelColor;
 
   private String secondaryTextColor;
 
@@ -30,6 +34,7 @@ public class OrganizationStyle {
   private String textColor;
 
   private String textSecondaryColor;
+  
 
   @Enumerated(STRING)
   private OrganizationFont font;
