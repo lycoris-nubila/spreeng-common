@@ -35,6 +35,7 @@ public class OrganizationStyle {
 
   private String textSecondaryColor;
   
+  private String componentColoredBackgroundColor;
 
   @Enumerated(STRING)
   private OrganizationFont font;
