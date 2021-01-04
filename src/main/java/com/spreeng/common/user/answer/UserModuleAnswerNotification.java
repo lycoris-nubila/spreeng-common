@@ -15,8 +15,10 @@ import lombok.experimental.SuperBuilder;
 public abstract class UserModuleAnswerNotification implements LycorisSubjectMessage {
 
   private UUID userId;
-
+  
   private UUID reportTaskId;
+  
+  private List<String> notes;
   
   private UUID pushOrgModuleId;
 
