@@ -16,11 +16,13 @@ public class UserModuleAnswerContact {
 
   private UUID id;
 
-  private String name;
-
   private UUID ownerId;
   
   private String language;
+  
+  private String lastName;
+  
+  private String firstName;
 
   private String companyName;
 
