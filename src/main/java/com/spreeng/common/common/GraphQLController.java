@@ -28,4 +28,8 @@ public class GraphQLController {
           CommonMessage.ERROR_WEB_REQUEST_UNAUTHORIZED.getMessageKey());
     }
   }
+
+  protected boolean hasAuthorization(LycorisGraphQLContext context) {
+    return context.getAuthentication() != null;
+  }
 }
