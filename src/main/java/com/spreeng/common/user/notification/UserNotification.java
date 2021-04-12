@@ -57,4 +57,6 @@ public abstract class UserNotification implements LycorisSubjectMessage {
   private UUID coachId;
 
   private ZoneId timeZone;
+
+  private Long lastConnectionDateTime;
 }
