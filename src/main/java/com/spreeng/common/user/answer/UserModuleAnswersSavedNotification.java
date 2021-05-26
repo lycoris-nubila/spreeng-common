@@ -1,5 +1,6 @@
 package com.spreeng.common.user.answer;
 
+import java.util.List;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -22,8 +23,12 @@ public class UserModuleAnswersSavedNotification implements LycorisSubjectMessage
   private UUID contactId;
 
   private Boolean isAutoSave;
+  
+  private UUID pushOrgModuleId;
 
   private UUID organizationModuleId;
+  
+  private List<UserModuleAnswerContact> contacts;
 
   public static UserModuleAnswersSavedNotificationBuilder<?, ?> builder(
       UUID userId, Boolean isAutoSave, UUID organizationModuleId) {
