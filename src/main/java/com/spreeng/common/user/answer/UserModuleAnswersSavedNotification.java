@@ -21,15 +21,15 @@ public class UserModuleAnswersSavedNotification implements LycorisSubjectMessage
 
   private UUID contactId;
 
-  private Boolean markFinished;
+  private Boolean isAutoSave;
 
   private UUID organizationModuleId;
 
   public static UserModuleAnswersSavedNotificationBuilder<?, ?> builder(
-      UUID userId, Boolean markFinished, UUID organizationModuleId) {
+      UUID userId, Boolean isAutoSave, UUID organizationModuleId) {
     return new UserModuleAnswersSavedNotificationBuilderImpl()
         .userId(userId)
-        .markFinished(markFinished)
+        .isAutoSave(isAutoSave)
         .organizationModuleId(organizationModuleId);
   }
 

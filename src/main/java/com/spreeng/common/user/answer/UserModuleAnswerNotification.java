@@ -16,8 +16,6 @@ public abstract class UserModuleAnswerNotification implements LycorisSubjectMess
 
   private UUID userId;
   
-  private Boolean finished;
-  
   private UUID reportTaskId;
   
   private List<String> notes;
