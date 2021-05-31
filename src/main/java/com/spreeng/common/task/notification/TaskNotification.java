@@ -1,5 +1,6 @@
 package com.spreeng.common.task.notification;
 
+import java.util.List;
 import java.util.UUID;
 
 import javax.validation.constraints.NotNull;
@@ -20,8 +21,6 @@ public abstract class TaskNotification implements LycorisSubjectMessage {
 
   private Boolean done;
 
-  private UUID moduleId;
-
   @NonNull private UUID id;
 
   private String todoTitle;
@@ -31,6 +30,8 @@ public abstract class TaskNotification implements LycorisSubjectMessage {
   private UUID participantId;
 
   private String contactName;
+  
+  private List<UUID> modulesId;
 
   @NotNull private UUID ownerId;
 
